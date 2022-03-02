@@ -1,0 +1,106 @@
+//
+//  WeatherView.swift
+//  Workout
+//
+//  Created by Anton Makarov on 16.01.2022.
+//
+
+import UIKit
+
+class WeatherView: UIView {
+    
+//MARK: - WEATHER BLOCK
+    private let weatherBlock: UIView = {
+       let block = UIView()
+        block.backgroundColor = .white
+        block.layer.cornerRadius = 10
+        block.addShadowOnView()
+        block.translatesAutoresizingMaskIntoConstraints = false
+        return block
+    }()
+//MARK: - SUN IMAGE
+    private let sunImage: UIImageView = {
+       let image = UIImageView()
+        image.image = UIImage(named: "sunImage")
+        image.translatesAutoresizingMaskIntoConstraints = false
+        return image
+    }()
+//MARK: - WEATHER TITLE
+    private let weatherTitle: UILabel = {
+       let title = UILabel()
+        title.text = "Солнечно"
+        title.textColor = .specialGray
+        title.font = .robotoMedium18()
+        title.adjustsFontSizeToFitWidth = true
+        title.translatesAutoresizingMaskIntoConstraints = false
+        return title
+    }()
+//MARK: - WEATHER CONTENT
+    private let weatherContent: UILabel = {
+       let title = UILabel()
+        title.text = "Хорошая погода, чтобы позаниматься на улице"
+        title.textColor = .lightGray
+        title.font = .robotoMedium14()
+        title.numberOfLines = 2
+        title.adjustsFontSizeToFitWidth = true
+        title.translatesAutoresizingMaskIntoConstraints = false
+        return title
+    }()
+    
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+
+        setupView()
+        setConstraints()
+        
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+//MARK: -  SETUP VIEW
+    private func setupView() {
+        addShadowOnView()
+        layer.cornerRadius = 10
+        backgroundColor = .white
+        translatesAutoresizingMaskIntoConstraints = false
+        addSubview(weatherBlock)
+        addSubview(sunImage)
+        addSubview(weatherTitle)
+        addSubview(weatherContent)
+    }
+        
+}
+
+//MARK: - SetConstraint
+
+extension WeatherView {
+
+    private func setConstraints() {
+
+        NSLayoutConstraint.activate([
+            sunImage.centerYAnchor.constraint(equalTo: centerYAnchor),
+            sunImage.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
+            sunImage.widthAnchor.constraint(equalToConstant: 60),
+            sunImage.heightAnchor.constraint(equalToConstant: 60)
+        ])
+        
+        NSLayoutConstraint.activate([
+            weatherTitle.topAnchor.constraint(equalTo: topAnchor, constant: 10),
+            weatherTitle.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
+            weatherTitle.trailingAnchor.constraint(equalTo: sunImage.leadingAnchor, constant: -10),
+            weatherTitle.heightAnchor.constraint(equalToConstant: 20)
+        ])
+        
+        NSLayoutConstraint.activate([
+            weatherContent.topAnchor.constraint(equalTo: weatherTitle.bottomAnchor, constant: 5),
+            weatherContent.trailingAnchor.constraint(equalTo: sunImage.leadingAnchor, constant: 5),
+            weatherContent.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
+            weatherContent.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -5)
+        ])
+
+    }
+
+}
