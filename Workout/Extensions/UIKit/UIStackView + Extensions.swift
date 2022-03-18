@@ -15,7 +15,6 @@ extension UIStackView {
     self.axis = axis
     self.spacing = spacing
     self.translatesAutoresizingMaskIntoConstraints = false
-    
     }
     
 }

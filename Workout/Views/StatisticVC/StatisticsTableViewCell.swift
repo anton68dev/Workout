@@ -31,7 +31,7 @@ class StatisticsTableViewCell: UITableViewCell {
 
     private let differenceLabel: UILabel = {
         let label = UILabel()
-         label.text = "+2"
+         label.text = "+"
          label.textColor = .specialGreen
          label.font = .robotoMedium24()
          label.translatesAutoresizingMaskIntoConstraints = false
@@ -86,6 +86,7 @@ class StatisticsTableViewCell: UITableViewCell {
         switch difference {
         case ..<0: differenceLabel.textColor = .specialGreen
         case 1...: differenceLabel.textColor = .specialDarkYellow
+                   differenceLabel.text = "+\(difference)"
         default:
             differenceLabel.textColor = .specialGray
         }

@@ -241,8 +241,8 @@ extension MainViewController: UITableViewDelegate {
         }
         
         action.backgroundColor = .specialBackground
-        action.image = UIImage(named: "Delete")
-        
+//        action.image = UIImage(named: "Delete")
+        action.image = UIImage(systemName: "trash.fill")?.withRenderingMode(.alwaysOriginal)
         return UISwipeActionsConfiguration(actions: [action])
     }
 }

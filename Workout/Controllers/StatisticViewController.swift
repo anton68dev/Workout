@@ -19,7 +19,7 @@ class StatisticViewController: UIViewController {
     private let statisticWorkoutLabel: UILabel = {
         let label = UILabel()
         label.text = "STATISTIC"
-        label.textColor = .specialBlack
+        label.textColor = .specialGray
         label.font = .robotoMedium24()
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -69,6 +69,7 @@ class StatisticViewController: UIViewController {
         tableView.reloadData()
     }
     
+//MARK: - viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         
