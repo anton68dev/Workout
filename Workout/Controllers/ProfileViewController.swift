@@ -140,6 +140,7 @@ class ProfileViewController: UIViewController {
     
     private var resultWorkout = [ResultWorkout]()
     
+    
 //MARK: - viewWillAppear
 
     override func viewWillAppear(_ animated: Bool) {
@@ -197,7 +198,9 @@ class ProfileViewController: UIViewController {
     }
     
     @objc private func editingButtonTap() {
-        print("TAP")
+        let settingViewController = SettingViewController()
+        settingViewController.modalPresentationStyle = .fullScreen
+        present(settingViewController, animated: true)
     }
     
     private func setupUserParameters() {
@@ -305,7 +308,7 @@ extension ProfileViewController: UICollectionViewDelegateFlowLayout {
             ])
             
             NSLayoutConstraint.activate([
-                userPhotoView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 100),
+                userPhotoView.topAnchor.constraint(equalTo: userPhotoImageView.topAnchor, constant: 50),
                 userPhotoView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
                 userPhotoView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
                 userPhotoView.heightAnchor.constraint(equalToConstant: 110)

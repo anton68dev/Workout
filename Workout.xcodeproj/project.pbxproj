@@ -43,6 +43,10 @@
 		E2F7C62427A80BCE009594D0 /* CustomAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F7C62327A80BCE009594D0 /* CustomAlert.swift */; };
 		E2F7C62627AA773D009594D0 /* Int + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F7C62527AA773D009594D0 /* Int + Extensions.swift */; };
 		E2F7C62827B27D6C009594D0 /* Date + Extensions .swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F7C62727B27D6C009594D0 /* Date + Extensions .swift */; };
+		E2F7C62A27DB6B29009594D0 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F7C62927DB6B29009594D0 /* UserModel.swift */; };
+		E2F7C62C27DDB6DF009594D0 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F7C62B27DDB6DF009594D0 /* SettingViewController.swift */; };
+		E2F7C63027DDB83C009594D0 /* ProfileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F7C62F27DDB83C009594D0 /* ProfileCollectionViewCell.swift */; };
+		E2F7C63227DDBD61009594D0 /* GallaryOrPhotoAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F7C63127DDBD61009594D0 /* GallaryOrPhotoAlert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +86,10 @@
 		E2F7C62327A80BCE009594D0 /* CustomAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlert.swift; sourceTree = "<group>"; };
 		E2F7C62527AA773D009594D0 /* Int + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int + Extensions.swift"; sourceTree = "<group>"; };
 		E2F7C62727B27D6C009594D0 /* Date + Extensions .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date + Extensions .swift"; sourceTree = "<group>"; };
+		E2F7C62927DB6B29009594D0 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		E2F7C62B27DDB6DF009594D0 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		E2F7C62F27DDB83C009594D0 /* ProfileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCollectionViewCell.swift; sourceTree = "<group>"; };
+		E2F7C63127DDBD61009594D0 /* GallaryOrPhotoAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GallaryOrPhotoAlert.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				E23C5130279D6D8A009C23C9 /* WorkoutModel.swift */,
+				E2F7C62927DB6B29009594D0 /* UserModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -151,9 +160,10 @@
 				E23C50EA27940B2A009C23C9 /* MainViewController.swift */,
 				E23C511A27983D8A009C23C9 /* NewWorkoutViewController.swift */,
 				E23C5123279A8C79009C23C9 /* StatisticViewController.swift */,
-				E23C5125279A8C94009C23C9 /* ProfileViewController.swift */,
 				E23C5129279D31C0009C23C9 /* RepsWorkoutViewController.swift */,
 				E2F7C61B27A031F5009594D0 /* TimerWorkoutViewController.swift */,
+				E23C5125279A8C94009C23C9 /* ProfileViewController.swift */,
+				E2F7C62B27DDB6DF009594D0 /* SettingViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -165,6 +175,8 @@
 				E23C511C2798732A009C23C9 /* NewWorkoutVC */,
 				E2F7C61827A026D1009594D0 /* StartWorkoutVC */,
 				E2A95F22279EC01F00622DCD /* Alerts */,
+				E2F7C62E27DDB7BC009594D0 /* StatisticVC */,
+				E2F7C62D27DDB72F009594D0 /* ProfileVC */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -226,7 +238,6 @@
 			children = (
 				E23C51112794AD5A009C23C9 /* CalendarCollectionViewCell.swift */,
 				E23C51162795D7F3009C23C9 /* WorkoutTableViewCell.swift */,
-				E2F7C62127A3D84B009594D0 /* StatisticsTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -254,6 +265,7 @@
 				E2A95F23279EC08400622DCD /* SimpleAlert.swift */,
 				E2F7C61F27A15990009594D0 /* OKCancelAlert.swift */,
 				E2F7C62327A80BCE009594D0 /* CustomAlert.swift */,
+				E2F7C63127DDBD61009594D0 /* GallaryOrPhotoAlert.swift */,
 			);
 			path = Alerts;
 			sourceTree = "<group>";
@@ -265,6 +277,22 @@
 				E2F7C61D27A03370009594D0 /* WorkoutParametersTimerView.swift */,
 			);
 			path = StartWorkoutVC;
+			sourceTree = "<group>";
+		};
+		E2F7C62D27DDB72F009594D0 /* ProfileVC */ = {
+			isa = PBXGroup;
+			children = (
+				E2F7C62F27DDB83C009594D0 /* ProfileCollectionViewCell.swift */,
+			);
+			path = ProfileVC;
+			sourceTree = "<group>";
+		};
+		E2F7C62E27DDB7BC009594D0 /* StatisticVC */ = {
+			isa = PBXGroup;
+			children = (
+				E2F7C62127A3D84B009594D0 /* StatisticsTableViewCell.swift */,
+			);
+			path = StatisticVC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -361,14 +389,18 @@
 				E23C51152794B861009C23C9 /* WeatherView.swift in Sources */,
 				E23C512A279D31C0009C23C9 /* RepsWorkoutViewController.swift in Sources */,
 				E23C50E727940B2A009C23C9 /* AppDelegate.swift in Sources */,
+				E2F7C63227DDBD61009594D0 /* GallaryOrPhotoAlert.swift in Sources */,
 				E23C5120279873FE009C23C9 /* RepsOrTimerView.swift in Sources */,
 				E2F7C62827B27D6C009594D0 /* Date + Extensions .swift in Sources */,
 				E23C51122794AD5A009C23C9 /* CalendarCollectionViewCell.swift in Sources */,
 				E2A95F24279EC08400622DCD /* SimpleAlert.swift in Sources */,
+				E2F7C62C27DDB6DF009594D0 /* SettingViewController.swift in Sources */,
 				E2F7C61C27A031F5009594D0 /* TimerWorkoutViewController.swift in Sources */,
+				E2F7C62A27DB6B29009594D0 /* UserModel.swift in Sources */,
 				E23C511B27983D8A009C23C9 /* NewWorkoutViewController.swift in Sources */,
 				E2F7C62627AA773D009594D0 /* Int + Extensions.swift in Sources */,
 				E2F7C61A27A02716009594D0 /* WorkoutParametersView.swift in Sources */,
+				E2F7C63027DDB83C009594D0 /* ProfileCollectionViewCell.swift in Sources */,
 				E2F7C61E27A03370009594D0 /* WorkoutParametersTimerView.swift in Sources */,
 				E23C5128279AF2B9009C23C9 /* UILabel + Extensions.swift in Sources */,
 				E23C51062794184F009C23C9 /* UIView + Extensions.swift in Sources */,
