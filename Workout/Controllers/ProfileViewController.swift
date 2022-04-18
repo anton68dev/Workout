@@ -30,8 +30,9 @@ class ProfileViewController: UIViewController {
         imageView.backgroundColor = #colorLiteral(red: 0.7607843137, green: 0.7607843137, blue: 0.7607843137, alpha: 1)
         imageView.layer.cornerRadius = 50
         imageView.layer.borderWidth = 5
+        imageView.image = UIImage(named: "addPhoto")
         imageView.layer.borderColor = UIColor.white.cgColor
-        imageView.contentMode = .scaleAspectFit
+        imageView.contentMode = .center
         imageView.clipsToBounds = true
         imageView.translatesAutoresizingMaskIntoConstraints = false
        return imageView

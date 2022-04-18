@@ -173,6 +173,18 @@ extension StatisticViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         60
     }
+    
+//    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+//        let action = UIContextualAction(style: .destructive, title: "") { _, _, _ in
+//            let deleteModel = self.workoutArray[indexPath.row]
+//            RealmManager.shared.deleteWorkoutModel(model: deleteModel)
+//            tableView.reloadData()
+//        }
+//        
+//        action.backgroundColor = .specialBackground
+//        action.image = UIImage(systemName: "trash.fill")?.withRenderingMode(.alwaysOriginal)
+//        return UISwipeActionsConfiguration(actions: [action])
+//    }
 }
 
 // MARK: - setCostraint

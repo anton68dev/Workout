@@ -18,6 +18,8 @@ class CalendarView: UIView {
         let layout = UICollectionViewFlowLayout()
         let colletionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         colletionView.backgroundColor = .none
+//        layout.scrollDirection = .horizontal
+//        colletionView.showsHorizontalScrollIndicator = false
         colletionView.translatesAutoresizingMaskIntoConstraints = false
         return colletionView
     }()

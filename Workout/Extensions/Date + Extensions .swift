@@ -75,4 +75,10 @@ extension Date {
         return weekArray
     }
     
+    func ddMyyyyFromeDate() -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy/MM/ dd"
+        let date = formatter.string(from: self)
+        return date
+    }
 }

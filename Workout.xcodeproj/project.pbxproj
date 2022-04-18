@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E204B4EA2809812100538403 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = E204B4E92809812100538403 /* Notifications.swift */; };
+		E204B4EC280C3C2200538403 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E204B4EB280C3C2200538403 /* OnboardingViewController.swift */; };
+		E204B4EF280C434B00538403 /* OnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E204B4EE280C434B00538403 /* OnboardingCollectionViewCell.swift */; };
 		E23C50E727940B2A009C23C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23C50E627940B2A009C23C9 /* AppDelegate.swift */; };
 		E23C50E927940B2A009C23C9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23C50E827940B2A009C23C9 /* SceneDelegate.swift */; };
 		E23C50EB27940B2A009C23C9 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23C50EA27940B2A009C23C9 /* MainViewController.swift */; };
@@ -47,9 +50,13 @@
 		E2F7C62C27DDB6DF009594D0 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F7C62B27DDB6DF009594D0 /* SettingViewController.swift */; };
 		E2F7C63027DDB83C009594D0 /* ProfileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F7C62F27DDB83C009594D0 /* ProfileCollectionViewCell.swift */; };
 		E2F7C63227DDBD61009594D0 /* GallaryOrPhotoAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F7C63127DDBD61009594D0 /* GallaryOrPhotoAlert.swift */; };
+		E2F7C63427F078D8009594D0 /* UITextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F7C63327F078D8009594D0 /* UITextField+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E204B4E92809812100538403 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
+		E204B4EB280C3C2200538403 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		E204B4EE280C434B00538403 /* OnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCollectionViewCell.swift; sourceTree = "<group>"; };
 		E23C50E327940B2A009C23C9 /* Workout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Workout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E23C50E627940B2A009C23C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E23C50E827940B2A009C23C9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +97,7 @@
 		E2F7C62B27DDB6DF009594D0 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		E2F7C62F27DDB83C009594D0 /* ProfileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCollectionViewCell.swift; sourceTree = "<group>"; };
 		E2F7C63127DDBD61009594D0 /* GallaryOrPhotoAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GallaryOrPhotoAlert.swift; sourceTree = "<group>"; };
+		E2F7C63327F078D8009594D0 /* UITextField+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +113,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E204B4ED280C430200538403 /* OnboardingVC */ = {
+			isa = PBXGroup;
+			children = (
+				E204B4EE280C434B00538403 /* OnboardingCollectionViewCell.swift */,
+			);
+			path = OnboardingVC;
+			sourceTree = "<group>";
+		};
 		E23C50DA27940B2A009C23C9 = {
 			isa = PBXGroup;
 			children = (
@@ -140,6 +156,7 @@
 			children = (
 				E23C50E627940B2A009C23C9 /* AppDelegate.swift */,
 				E23C50E827940B2A009C23C9 /* SceneDelegate.swift */,
+				E204B4E92809812100538403 /* Notifications.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -156,6 +173,7 @@
 		E23C50FC2794147B009C23C9 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				E204B4EB280C3C2200538403 /* OnboardingViewController.swift */,
 				E23C51212799667B009C23C9 /* MainTabBarController.swift */,
 				E23C50EA27940B2A009C23C9 /* MainViewController.swift */,
 				E23C511A27983D8A009C23C9 /* NewWorkoutViewController.swift */,
@@ -171,6 +189,7 @@
 		E23C50FD2794148B009C23C9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E204B4ED280C430200538403 /* OnboardingVC */,
 				E23C510E27948C68009C23C9 /* MainVC */,
 				E23C511C2798732A009C23C9 /* NewWorkoutVC */,
 				E2F7C61827A026D1009594D0 /* StartWorkoutVC */,
@@ -199,6 +218,7 @@
 				E23C51052794184F009C23C9 /* UIView + Extensions.swift */,
 				E23C510727941B62009C23C9 /* UIStackView + Extensions.swift */,
 				E23C5127279AF2B9009C23C9 /* UILabel + Extensions.swift */,
+				E2F7C63327F078D8009594D0 /* UITextField+Extensions.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -386,6 +406,7 @@
 				E23C511E279873D8009C23C9 /* DateAndRepeatView.swift in Sources */,
 				E23C5126279A8C94009C23C9 /* ProfileViewController.swift in Sources */,
 				E23C50EB27940B2A009C23C9 /* MainViewController.swift in Sources */,
+				E204B4EA2809812100538403 /* Notifications.swift in Sources */,
 				E23C51152794B861009C23C9 /* WeatherView.swift in Sources */,
 				E23C512A279D31C0009C23C9 /* RepsWorkoutViewController.swift in Sources */,
 				E23C50E727940B2A009C23C9 /* AppDelegate.swift in Sources */,
@@ -398,11 +419,14 @@
 				E2F7C61C27A031F5009594D0 /* TimerWorkoutViewController.swift in Sources */,
 				E2F7C62A27DB6B29009594D0 /* UserModel.swift in Sources */,
 				E23C511B27983D8A009C23C9 /* NewWorkoutViewController.swift in Sources */,
+				E204B4EF280C434B00538403 /* OnboardingCollectionViewCell.swift in Sources */,
 				E2F7C62627AA773D009594D0 /* Int + Extensions.swift in Sources */,
 				E2F7C61A27A02716009594D0 /* WorkoutParametersView.swift in Sources */,
 				E2F7C63027DDB83C009594D0 /* ProfileCollectionViewCell.swift in Sources */,
 				E2F7C61E27A03370009594D0 /* WorkoutParametersTimerView.swift in Sources */,
+				E2F7C63427F078D8009594D0 /* UITextField+Extensions.swift in Sources */,
 				E23C5128279AF2B9009C23C9 /* UILabel + Extensions.swift in Sources */,
+				E204B4EC280C3C2200538403 /* OnboardingViewController.swift in Sources */,
 				E23C51062794184F009C23C9 /* UIView + Extensions.swift in Sources */,
 				E23C50E927940B2A009C23C9 /* SceneDelegate.swift in Sources */,
 				E2F7C62227A3D84B009594D0 /* StatisticsTableViewCell.swift in Sources */,

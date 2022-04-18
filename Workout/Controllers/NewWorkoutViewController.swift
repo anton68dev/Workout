@@ -155,6 +155,7 @@ class NewWorkoutViewController: UIViewController {
         
         if count != 0 && workoutModel.workoutSets != 0 && (workoutModel.workoutReps != 0 || workoutModel.workoutTimer != 0) {
             RealmManager.shared.saveWorkoutModel(model: workoutModel)
+            createNotification()
             alertOk(title: "Saved", message: nil)
             workoutModel = WorkoutModel()
             refreshWorkoutObjects()
@@ -173,6 +174,12 @@ class NewWorkoutViewController: UIViewController {
         repsOrTimerView.repsSlider.value = 0
         repsOrTimerView.numberOfTimerLabel.text = "0"
         repsOrTimerView.timerSlider.value = 0
+    }
+    
+    private func createNotification() {
+        let notifications = Notifications()
+        let stringDate = workoutModel.workoutDate.ddMyyyyFromeDate()
+        notifications.sheduleDateNitification(date: workoutModel.workoutDate, id: "workout" + stringDate)
     }
 
 }
