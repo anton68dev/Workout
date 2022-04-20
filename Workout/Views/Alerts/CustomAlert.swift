@@ -180,5 +180,4 @@ class CustomAlert {
     @objc private func kbWillHide() {
         scrollView.contentOffset = CGPoint.zero
     }
-    
 }

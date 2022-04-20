@@ -56,6 +56,7 @@ class OnboardingCollectionViewCell: UICollectionViewCell {
     }
     
 //MARK: - setupViews
+    
     private func setupViews() {
         backgroundColor = .specialGreen
         

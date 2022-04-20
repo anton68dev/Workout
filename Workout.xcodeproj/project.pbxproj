@@ -10,6 +10,9 @@
 		E204B4EA2809812100538403 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = E204B4E92809812100538403 /* Notifications.swift */; };
 		E204B4EC280C3C2200538403 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E204B4EB280C3C2200538403 /* OnboardingViewController.swift */; };
 		E204B4EF280C434B00538403 /* OnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E204B4EE280C434B00538403 /* OnboardingCollectionViewCell.swift */; };
+		E204B4F2280DAC9F00538403 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E204B4F1280DAC9F00538403 /* NetworkRequest.swift */; };
+		E204B4F4280DB37C00538403 /* NetworkDataFetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = E204B4F3280DB37C00538403 /* NetworkDataFetch.swift */; };
+		E204B4F6280DB46D00538403 /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E204B4F5280DB46D00538403 /* WeatherModel.swift */; };
 		E23C50E727940B2A009C23C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23C50E627940B2A009C23C9 /* AppDelegate.swift */; };
 		E23C50E927940B2A009C23C9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23C50E827940B2A009C23C9 /* SceneDelegate.swift */; };
 		E23C50EB27940B2A009C23C9 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23C50EA27940B2A009C23C9 /* MainViewController.swift */; };
@@ -57,6 +60,9 @@
 		E204B4E92809812100538403 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
 		E204B4EB280C3C2200538403 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		E204B4EE280C434B00538403 /* OnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCollectionViewCell.swift; sourceTree = "<group>"; };
+		E204B4F1280DAC9F00538403 /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
+		E204B4F3280DB37C00538403 /* NetworkDataFetch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataFetch.swift; sourceTree = "<group>"; };
+		E204B4F5280DB46D00538403 /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
 		E23C50E327940B2A009C23C9 /* Workout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Workout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E23C50E627940B2A009C23C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E23C50E827940B2A009C23C9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -121,6 +127,15 @@
 			path = OnboardingVC;
 			sourceTree = "<group>";
 		};
+		E204B4F0280DAC6000538403 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				E204B4F1280DAC9F00538403 /* NetworkRequest.swift */,
+				E204B4F3280DB37C00538403 /* NetworkDataFetch.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		E23C50DA27940B2A009C23C9 = {
 			isa = PBXGroup;
 			children = (
@@ -145,6 +160,7 @@
 				E23C50FD2794148B009C23C9 /* Views */,
 				E23C50FC2794147B009C23C9 /* Controllers */,
 				E2A95F1F279DF40000622DCD /* Services */,
+				E204B4F0280DAC6000538403 /* Network */,
 				E23C50FE2794157C009C23C9 /* Extensions */,
 				E23C5100279415CB009C23C9 /* Resource */,
 			);
@@ -166,6 +182,7 @@
 			children = (
 				E23C5130279D6D8A009C23C9 /* WorkoutModel.swift */,
 				E2F7C62927DB6B29009594D0 /* UserModel.swift */,
+				E204B4F5280DB46D00538403 /* WeatherModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -407,6 +424,7 @@
 				E23C5126279A8C94009C23C9 /* ProfileViewController.swift in Sources */,
 				E23C50EB27940B2A009C23C9 /* MainViewController.swift in Sources */,
 				E204B4EA2809812100538403 /* Notifications.swift in Sources */,
+				E204B4F2280DAC9F00538403 /* NetworkRequest.swift in Sources */,
 				E23C51152794B861009C23C9 /* WeatherView.swift in Sources */,
 				E23C512A279D31C0009C23C9 /* RepsWorkoutViewController.swift in Sources */,
 				E23C50E727940B2A009C23C9 /* AppDelegate.swift in Sources */,
@@ -415,6 +433,7 @@
 				E2F7C62827B27D6C009594D0 /* Date + Extensions .swift in Sources */,
 				E23C51122794AD5A009C23C9 /* CalendarCollectionViewCell.swift in Sources */,
 				E2A95F24279EC08400622DCD /* SimpleAlert.swift in Sources */,
+				E204B4F6280DB46D00538403 /* WeatherModel.swift in Sources */,
 				E2F7C62C27DDB6DF009594D0 /* SettingViewController.swift in Sources */,
 				E2F7C61C27A031F5009594D0 /* TimerWorkoutViewController.swift in Sources */,
 				E2F7C62A27DB6B29009594D0 /* UserModel.swift in Sources */,
@@ -432,6 +451,7 @@
 				E2F7C62227A3D84B009594D0 /* StatisticsTableViewCell.swift in Sources */,
 				E23C5124279A8C79009C23C9 /* StatisticViewController.swift in Sources */,
 				E2F7C62427A80BCE009594D0 /* CustomAlert.swift in Sources */,
+				E204B4F4280DB37C00538403 /* NetworkDataFetch.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

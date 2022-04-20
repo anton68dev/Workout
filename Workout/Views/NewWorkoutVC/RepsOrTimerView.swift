@@ -110,7 +110,7 @@ class RepsOrTimerView: UIView {
     var timerStackView = UIStackView()
    
     
-//MARK: - VIEW DIDLOAD
+//MARK: - override init
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -122,7 +122,7 @@ class RepsOrTimerView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-//MARK: -  SETUP VIEW
+//MARK: -  setupView
         private func setupView() {
             layer.cornerRadius = 10
             backgroundColor = .specialBrown
@@ -180,7 +180,7 @@ class RepsOrTimerView: UIView {
         slider.value = 0
     }
     
-//MARK: - CONSRAINTS
+//MARK: - setConstraints
     private func setConstraints() {
         
         NSLayoutConstraint.activate([

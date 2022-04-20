@@ -47,7 +47,7 @@ class DateAndRepeatView: UIView {
     var repeatStackView = UIStackView()
     
     
-//MARK: - VIEW DIDLOAD
+//MARK: - override init
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -59,7 +59,7 @@ class DateAndRepeatView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-//MARK: -  SETUP VIEW
+//MARK: -  setupView
     private func setupView() {
         layer.cornerRadius = 10
         backgroundColor = .specialBrown
@@ -76,7 +76,7 @@ class DateAndRepeatView: UIView {
         addSubview(repeatStackView)
     }
 
-//MARK: - CONSRAINTS
+//MARK: - setConstraints
     private func setConstraints() {
         
         NSLayoutConstraint.activate([

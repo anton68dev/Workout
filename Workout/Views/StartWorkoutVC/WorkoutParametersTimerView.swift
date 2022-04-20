@@ -103,8 +103,8 @@ class WorkoutParametersTimerView: UIView {
     
     weak var cellNextSetTimerDelegate: NextSetTimerProtocoll?
 
+//MARK: - override init
     
-    //MARK: - VIEW DIDLOAD
         override init(frame: CGRect) {
             super.init(frame: frame)
             
@@ -116,7 +116,7 @@ class WorkoutParametersTimerView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    //MARK: -  SETUP VIEW
+//MARK: -  setupView
     private func setupView() {
         
         backgroundColor = .specialBrown
@@ -140,7 +140,6 @@ class WorkoutParametersTimerView: UIView {
         addSubview(repsLineView)
         addSubview(editingButton)
         addSubview(nextSetsButton)
-        
     }
     
     @objc private func editingButtonTapped() {
@@ -151,7 +150,7 @@ class WorkoutParametersTimerView: UIView {
         cellNextSetTimerDelegate?.nextSetTapped()
     }
     
-    //MARK: - CONSRAINTS
+//MARK: - setConstraints
         private func setConstraints() {
             
             NSLayoutConstraint.activate([

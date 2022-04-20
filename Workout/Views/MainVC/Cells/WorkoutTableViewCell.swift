@@ -88,6 +88,8 @@ class WorkoutTableViewCell: UITableViewCell {
     weak var cellStartWorkoutDelegate: StartWorkoutProtocol?
     weak var cellStartWorkoutTimerDelegate: StartWorkoutTimerProtocol?
     
+ //MARK: - override init
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
@@ -98,6 +100,8 @@ class WorkoutTableViewCell: UITableViewCell {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+//MARK: - setupViews
     
     private func setupViews() {
         backgroundColor = .clear
@@ -147,9 +151,10 @@ class WorkoutTableViewCell: UITableViewCell {
             startButton.backgroundColor = .specialYellow
             startButton.isEnabled = true
         }
-        
     }
     
+//MARK: - SetConstraints
+
     private func setCostraint() {
         
         NSLayoutConstraint.activate([

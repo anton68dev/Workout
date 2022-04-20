@@ -93,6 +93,8 @@ class MainViewController: UIViewController {
     
     private let localRealm = try!Realm()
     private var workoutArray: Results<WorkoutModel>! = nil
+    private var userArray: Results<UserModel>!
+
     
     override func viewDidLayoutSubviews() {
         userPhotoImageView.layer.cornerRadius = userPhotoImageView.frame.width / 2
@@ -103,6 +105,8 @@ class MainViewController: UIViewController {
         super.viewWillAppear(animated)
         
         tableView.reloadData()
+        getWeather()
+        setupUserParameters()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -115,10 +119,12 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        userArray = localRealm.objects(UserModel.self)
         setupView()
         setConstraints()
         setDelegate()
         getWorkouts(date: Date().localDate())
+        setupUserParameters()
         tableView.register(WorkoutTableViewCell.self, forCellReuseIdentifier: idWorkoutTableViewCell)
         
     }
@@ -148,6 +154,17 @@ class MainViewController: UIViewController {
         newWorkoutViewController.modalPresentationStyle = .fullScreen
         present(newWorkoutViewController, animated: true)
     }
+    
+    private func setupUserParameters() {
+        if userArray.count != 0 {
+            userNameLabel.text = userArray[0].userFirstName + userArray[0].userSecondName
+        
+            guard let data = userArray[0].userImage else { return }
+            guard let image = UIImage(data: data) else { return }
+            userPhotoImageView.image = image
+        }
+    }
+    
     
     private func getWorkouts(date: Date) {
                
@@ -185,6 +202,22 @@ class MainViewController: UIViewController {
             let onboardingViewController = OnboardingViewController()
             onboardingViewController.modalPresentationStyle = .fullScreen
             present(onboardingViewController, animated: false)
+        }
+    }
+    
+    private func getWeather() {
+        NetworkDataFetch.shared.fetchWeather { [weak self] model, error in
+            guard let self = self else {return}
+            if error == nil {
+                guard let model = model else {return}
+                self.weatherView.weatherTitle.text = "\(model.currently.iconLocal) \(model.currently.temperatureCelsius)°C"
+                self.weatherView.weatherContent.text = model.currently.description
+                
+                guard let imageIcon = model.currently.icon else {return}
+                self.weatherView.weatherImage.image = UIImage(named: imageIcon)
+            } else {
+                self.alertOk(title: "Error", message: "No weather data")
+            }
         }
     }
     

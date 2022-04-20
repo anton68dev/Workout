@@ -27,6 +27,8 @@ class CalendarView: UIView {
     private let idCalendarCell = "idCalendarCell"
     
     weak var cellCollectionViewDelegate: SelectCollectionViewItemProtocol?
+  
+//MARK: - override init
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -42,6 +44,8 @@ class CalendarView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+//MARK: - setupViews
+    
     private func setupViews() {
         backgroundColor = .specialGreen
         layer.cornerRadius = 10
@@ -49,12 +53,12 @@ class CalendarView: UIView {
 
         addSubview(collectionView)
     }
-    
+//MARK: - setDelegates
+
     private func setDelegates() {
         collectionView.delegate = self
         collectionView.dataSource = self
     }
-    
 }
 
 //MARK: - UICollectionViewDataSource
@@ -76,11 +80,8 @@ extension CalendarView: UICollectionViewDataSource {
         if indexPath.item == 6 {
             collectionView.selectItem(at: indexPath, animated: true, scrollPosition: .right)
         }
-        
         return cell
     }
-    
-    
 }
 
 //MARK: - UICollectionViewDelegate
@@ -108,7 +109,6 @@ extension CalendarView: UICollectionViewDelegate {
             cellCollectionViewDelegate?.selectItem(date: dateTimeZone.offsetDays(days: 0))
         }
     }
-    
 }
 
 //MARK: - UICollectionViewDelegateFlowLayout
@@ -135,8 +135,6 @@ extension CalendarView {
             collectionView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
             collectionView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -5)
         ])
-
     }
-    
 }
     

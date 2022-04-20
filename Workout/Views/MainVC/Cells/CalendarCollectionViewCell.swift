@@ -43,7 +43,8 @@ class CalendarCollectionViewCell: UICollectionViewCell {
             }
         }
     }
-    
+//MARK: - override init
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -55,6 +56,8 @@ class CalendarCollectionViewCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+//MARK: -  setupViews
+
     private func setupViews() {
       
         addSubview(dayOfWeekLabel)
@@ -66,6 +69,8 @@ class CalendarCollectionViewCell: UICollectionViewCell {
         dayOfWeekLabel.text = dayOfWeek
     }
     
+//MARK: - SetConstraints
+
     private func setConstrainst() {
      
         NSLayoutConstraint.activate([

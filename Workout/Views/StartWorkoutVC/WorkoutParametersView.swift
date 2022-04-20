@@ -103,7 +103,8 @@ class WorkoutParametersView: UIView {
     
     weak var cellNextSetDelegate: NextSetProtocoll?
     
-    //MARK: - VIEW DIDLOAD
+//MARK: - override init
+    
         override init(frame: CGRect) {
             super.init(frame: frame)
             
@@ -115,7 +116,8 @@ class WorkoutParametersView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    //MARK: -  SETUP VIEW
+//MARK: - setupView
+    
     private func setupView() {
         
         backgroundColor = .specialBrown
@@ -148,7 +150,8 @@ class WorkoutParametersView: UIView {
         cellNextSetDelegate?.nextSetTapped()
     }
     
-    //MARK: - CONSRAINTS
+//MARK: - setConstraints
+    
         private func setConstraints() {
             
             NSLayoutConstraint.activate([
