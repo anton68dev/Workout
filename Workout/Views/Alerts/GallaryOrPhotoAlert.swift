@@ -18,7 +18,7 @@ extension UIViewController {
             completionHandler(camera)
         }
         
-        let photoLibrary = UIAlertAction(title: "Photo Lirary", style: .default) { _ in
+        let photoLibrary = UIAlertAction(title: "Photo Library", style: .default) { _ in
             let photoLibrary = UIImagePickerController.SourceType.photoLibrary
             completionHandler(photoLibrary)
         }

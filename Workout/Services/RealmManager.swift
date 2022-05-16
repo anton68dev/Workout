@@ -48,9 +48,11 @@ class RealmManager {
         }
     }
     
+    //User Model
+    
     func saveUserModel(model: UserModel) {
         try! localRealm.write {
-            localRealm.delete(model)
+            localRealm.add(model)
         }
     }
     
@@ -65,6 +67,5 @@ class RealmManager {
             users[0].userTarget = model.userTarget
             users[0].userImage = model.userImage
         }
-        
     }
 }

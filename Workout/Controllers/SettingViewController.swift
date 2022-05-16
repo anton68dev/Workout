@@ -145,6 +145,7 @@ class SettingViewController: UIViewController {
         addTaps()
         
         userArray = localRealm.objects(UserModel.self)
+        
         loadUserInfo()
     }
     

@@ -151,7 +151,7 @@ extension OnboardingViewController: UICollectionViewDelegateFlowLayout {
     }
 }
 
-//MARK: - OnboardingViewController
+//MARK: - setConstraints
 
 extension OnboardingViewController {
    
