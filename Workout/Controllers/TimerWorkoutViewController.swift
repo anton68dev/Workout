@@ -18,7 +18,7 @@ class TimerWorkoutViewController: UIViewController {
         return label
     }()
     
-    private let closeButton: UIButton = {
+    private lazy var closeButton: UIButton = {
         let button = UIButton(type: .system)
         button.setBackgroundImage(UIImage(named: "closeButton"), for: .normal)
         button.addTarget(self, action: #selector(closeButtonTapped), for: .touchUpInside)
@@ -49,7 +49,7 @@ class TimerWorkoutViewController: UIViewController {
     
     let workoutParametersTimerView = WorkoutParametersTimerView()
     
-    private let finishButton: UIButton = {
+    private lazy var finishButton: UIButton = {
         let button = UIButton(type: .system)
         button.backgroundColor = .specialGreen
         button.layer.cornerRadius = 10
@@ -211,7 +211,6 @@ extension TimerWorkoutViewController: NextSetTimerProtocoll {
 extension TimerWorkoutViewController {
     
     private func animationCircular() {
-        
         let center = CGPoint(x: ellipseImageView.frame.width / 2, y: ellipseImageView.frame.height / 2)
         let endAngle = (-CGFloat.pi / 2)
         let startAngle = 2 * CGFloat.pi + endAngle

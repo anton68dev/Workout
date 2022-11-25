@@ -36,12 +36,11 @@ class MainViewController: UIViewController {
         label.font = .robotoMedium24()
         label.adjustsFontSizeToFitWidth = true
         label.minimumScaleFactor = 0.5
-//        label.numberOfLines = 2
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
-    private let addWorkoutButton: UIButton = {
+    private lazy var addWorkoutButton: UIButton = {
         let button = UIButton(type: .system)
         button.backgroundColor = .specialYellow
         button.layer.cornerRadius = 10
@@ -82,7 +81,6 @@ class MainViewController: UIViewController {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "noTraining")
         imageView.contentMode = .scaleAspectFit
-//        imageView.isHidden = true
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
@@ -116,7 +114,7 @@ class MainViewController: UIViewController {
         showOnboarding()
     }
     
-//MARK: - VIEW DIDLOAD
+//MARK: - VIEWDIDLOAD
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -158,7 +156,7 @@ class MainViewController: UIViewController {
     
     private func setupUserParameters() {
         if userArray.count != 0 {
-            userNameLabel.text = userArray[0].userFirstName + userArray[0].userSecondName
+            userNameLabel.text = userArray[0].userFirstName + " " + userArray[0].userSecondName
         
             guard let data = userArray[0].userImage else { return }
             guard let image = UIImage(data: data) else { return }
@@ -185,7 +183,7 @@ class MainViewController: UIViewController {
     }
     
     private func checkWorkoutsToday() {
-       
+        
         if workoutArray.count == 0 {
             tableView.isHidden = true
             noTrainingImageView.isHidden = false
@@ -221,7 +219,6 @@ class MainViewController: UIViewController {
             }
         }
     }
-    
 }
 
 //MARK: - StartWorkoutProtocol
@@ -241,7 +238,6 @@ extension MainViewController: StartWorkoutProtocol {
             startWorkoutTimerViewController.workoutModel = model
             present(startWorkoutTimerViewController, animated: true)
         }
-       
     }
 }
 
@@ -252,8 +248,6 @@ extension MainViewController: SelectCollectionViewItemProtocol {
     func selectItem(date: Date) {
         getWorkouts(date: date)
     }
-    
-    
 }
 
 //MARK: - UITableViewDataSource
@@ -271,7 +265,6 @@ extension MainViewController: UITableViewDataSource {
         cell.cellStartWorkoutDelegate = self
         return cell
     }
-    
 }
 
 //MARK: - UITableViewDelegate
@@ -288,9 +281,8 @@ extension MainViewController: UITableViewDelegate {
             RealmManager.shared.deleteWorkoutModel(model: deleteModel)
             tableView.reloadData()
         }
-        
         action.backgroundColor = .specialBackground
-//        action.image = UIImage(named: "Delete")
+        //        action.image = UIImage(named: "Delete")
         action.image = UIImage(systemName: "trash.fill")?.withRenderingMode(.alwaysOriginal)
         return UISwipeActionsConfiguration(actions: [action])
     }

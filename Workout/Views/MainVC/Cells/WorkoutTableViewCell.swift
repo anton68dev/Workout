@@ -35,7 +35,7 @@ class WorkoutTableViewCell: UITableViewCell {
     
     private let workoutImageCellWeight: UIImageView = {
        let image = UIImageView()
-        image.image = UIImage(named: "imageCellWeight")
+        image.image = UIImage(named: "4")
         image.contentMode = .scaleAspectFit
         image.translatesAutoresizingMaskIntoConstraints = false
         return image
@@ -70,7 +70,7 @@ class WorkoutTableViewCell: UITableViewCell {
     
     var labelsStackView = UIStackView()
     
-    private let startButton: UIButton = {
+    private lazy var startButton: UIButton = {
         let button = UIButton(type: .system)
 //        button.backgroundColor = .specialYellow
         button.layer.cornerRadius = 10

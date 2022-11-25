@@ -20,7 +20,7 @@ class SettingViewController: UIViewController {
         return label
     }()
     
-    private let closeButton: UIButton = {
+    private lazy var closeButton: UIButton = {
         let button = UIButton(type: .system)
         button.setBackgroundImage(UIImage(named: "closeButton"), for: .normal)
         button.addTarget(self, action: #selector(closeButtonTapped), for: .touchUpInside)
@@ -112,7 +112,7 @@ class SettingViewController: UIViewController {
         return textField
     }()
     
-    private let saveButton: UIButton = {
+    private lazy var saveButton: UIButton = {
         let button = UIButton(type: .system)
         button.backgroundColor = .specialGreen
         button.layer.cornerRadius = 10
@@ -348,8 +348,8 @@ extension SettingViewController{
         
         NSLayoutConstraint.activate([
             saveButton.topAnchor.constraint(equalTo: weightTextField.bottomAnchor, constant: 40),
-            saveButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),
-            saveButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30),
+            saveButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            saveButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
             saveButton.heightAnchor.constraint(equalToConstant: 40)
         ])
     }

@@ -75,7 +75,7 @@ class WorkoutParametersView: UIView {
          return view
     }()
     
-    private let editingButton: UIButton = {
+    private lazy var editingButton: UIButton = {
         let button = UIButton(type: .system)
         button.setImage(UIImage(named: "editingButton")?.withRenderingMode(.alwaysOriginal), for: .normal)
         button.setTitle("Editing", for: .normal)
@@ -86,7 +86,7 @@ class WorkoutParametersView: UIView {
         return button
     }()
     
-    private let nextSetsButton: UIButton = {
+    private lazy var nextSetsButton: UIButton = {
         let button = UIButton(type: .system)
         button.backgroundColor = .specialYellow
         button.layer.cornerRadius = 10

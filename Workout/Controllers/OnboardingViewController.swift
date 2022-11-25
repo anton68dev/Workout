@@ -17,7 +17,7 @@ struct OnboardingStruct{
 class OnboardingViewController: UIViewController {
    
     
-    private let nextButton: UIButton = {
+    private lazy var nextButton: UIButton = {
         let button = UIButton(type: .system)
         button.backgroundColor = .white
         button.layer.cornerRadius = 25

@@ -73,7 +73,7 @@ class ProfileViewController: UIViewController {
         return label
     }()
     
-    private let editingButton: UIButton = {
+    private lazy var editingButton: UIButton = {
         let button = UIButton(type: .system)
         button.tintColor = .specialGreen
         button.setTitle("Editing ", for: .normal)
@@ -200,13 +200,13 @@ class ProfileViewController: UIViewController {
     
     @objc private func editingButtonTap() {
         let settingViewController = SettingViewController()
-        settingViewController.modalPresentationStyle = .fullScreen
+        settingViewController.modalPresentationStyle = .formSheet
         present(settingViewController, animated: true)
     }
     
     private func setupUserParameters() {
         if userArray.count != 0 {
-            userNameLabel.text = userArray[0].userFirstName + userArray[0].userSecondName
+            userNameLabel.text = userArray[0].userFirstName + " " + userArray[0].userSecondName
             userHeightLabel.text = "Height: \(userArray[0].userHeight)"
             userWeightLabel.text = "Weight: \(userArray[0].userWeight)"
             targetLabel.text = "TARGET: \(userArray[0].userTarget) workouts"

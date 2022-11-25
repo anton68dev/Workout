@@ -51,6 +51,4 @@ struct Currently: Decodable {
         default: return "No data"
         }
     }
-    
-  
 }

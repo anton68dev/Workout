@@ -25,7 +25,7 @@ class StatisticViewController: UIViewController {
         return label
     }()
     
-    private let segmentedControl: UISegmentedControl = {
+    private lazy var segmentedControl: UISegmentedControl = {
         let segmentedControl = UISegmentedControl(items: ["Week", "Month"])
         segmentedControl.selectedSegmentIndex = 0
         segmentedControl.backgroundColor = .specialGreen
@@ -118,7 +118,7 @@ class StatisticViewController: UIViewController {
     }
 
     private func getWorkoutName() -> [String] {
-
+        
         var nameArray = [String]()
         workoutArray = localRealm.objects(WorkoutModel.self)
         
@@ -131,7 +131,7 @@ class StatisticViewController: UIViewController {
     }
     
     private func getDifferenceModel(dateStart: Date) {
-
+        
         let dateEnd = Date().localDate()
         let nameArray = getWorkoutName()
         
@@ -139,15 +139,15 @@ class StatisticViewController: UIViewController {
             
             let predicateDifference = NSPredicate(format: "workoutName = '\(name)' AND workoutDate BETWEEN %@",[dateStart, dateEnd])
             workoutArray = localRealm.objects(WorkoutModel.self).filter(predicateDifference).sorted(byKeyPath: "workoutDate")
-
+            
             guard let last = workoutArray.last?.workoutReps,
                   let first = workoutArray.first?.workoutReps else {
-                        return
-                    }
+                return
+            }
             let differenceWorkout = DifferenceWorkout(name: name, lastReps: last, firstReps: first)
             differenceArray.append(differenceWorkout)
         }
-
+        
     }
     
 }
